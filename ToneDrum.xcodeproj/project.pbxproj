@@ -21,6 +21,13 @@
 		DC161EC81895CFDB00B888B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC161EAA1895CFDB00B888B2 /* UIKit.framework */; };
 		DC161ED01895CFDB00B888B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC161ECE1895CFDB00B888B2 /* InfoPlist.strings */; };
 		DC161ED21895CFDB00B888B2 /* ToneDrumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC161ED11895CFDB00B888B2 /* ToneDrumTests.m */; };
+		DC161EDD1895D0FB00B888B2 /* ADSR.m in Sources */ = {isa = PBXBuildFile; fileRef = DC161EDC1895D0FB00B888B2 /* ADSR.m */; };
+		DC161EE01895D15700B888B2 /* TDGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = DC161EDF1895D15700B888B2 /* TDGenerator.m */; };
+		DC161EE31895D3CF00B888B2 /* TDSineGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = DC161EE21895D3CF00B888B2 /* TDSineGenerator.m */; };
+		DC161EE71895D8B000B888B2 /* libTheAmazingAudioEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC161EE41895D8B000B888B2 /* libTheAmazingAudioEngine.a */; };
+		DC161EE81895D8B000B888B2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC161EE51895D8B000B888B2 /* Accelerate.framework */; };
+		DC161EE91895D8B000B888B2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC161EE61895D8B000B888B2 /* AudioToolbox.framework */; };
+		DC161EEC1895D97800B888B2 /* TDHarmonicsGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = DC161EEB1895D97800B888B2 /* TDHarmonicsGenerator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,17 @@
 		DC161ECD1895CFDB00B888B2 /* ToneDrumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ToneDrumTests-Info.plist"; sourceTree = "<group>"; };
 		DC161ECF1895CFDB00B888B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC161ED11895CFDB00B888B2 /* ToneDrumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToneDrumTests.m; sourceTree = "<group>"; };
+		DC161EDB1895D0FB00B888B2 /* ADSR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADSR.h; sourceTree = "<group>"; };
+		DC161EDC1895D0FB00B888B2 /* ADSR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADSR.m; sourceTree = "<group>"; };
+		DC161EDE1895D15700B888B2 /* TDGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDGenerator.h; sourceTree = "<group>"; };
+		DC161EDF1895D15700B888B2 /* TDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDGenerator.m; sourceTree = "<group>"; };
+		DC161EE11895D3CF00B888B2 /* TDSineGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSineGenerator.h; sourceTree = "<group>"; };
+		DC161EE21895D3CF00B888B2 /* TDSineGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSineGenerator.m; sourceTree = "<group>"; };
+		DC161EE41895D8B000B888B2 /* libTheAmazingAudioEngine.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libTheAmazingAudioEngine.a; path = "TheAmazingAudioEngine/build/Debug-iphoneos/libTheAmazingAudioEngine.a"; sourceTree = "<group>"; };
+		DC161EE51895D8B000B888B2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		DC161EE61895D8B000B888B2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		DC161EEA1895D97800B888B2 /* TDHarmonicsGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHarmonicsGenerator.h; sourceTree = "<group>"; };
+		DC161EEB1895D97800B888B2 /* TDHarmonicsGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDHarmonicsGenerator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +78,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC161EE71895D8B000B888B2 /* libTheAmazingAudioEngine.a in Frameworks */,
+				DC161EE81895D8B000B888B2 /* Accelerate.framework in Frameworks */,
+				DC161EE91895D8B000B888B2 /* AudioToolbox.framework in Frameworks */,
 				DC161EA91895CFDB00B888B2 /* CoreGraphics.framework in Frameworks */,
 				DC161EAB1895CFDB00B888B2 /* UIKit.framework in Frameworks */,
 				DC161EA71895CFDB00B888B2 /* Foundation.framework in Frameworks */,
@@ -101,6 +122,9 @@
 		DC161EA51895CFDB00B888B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC161EE41895D8B000B888B2 /* libTheAmazingAudioEngine.a */,
+				DC161EE51895D8B000B888B2 /* Accelerate.framework */,
+				DC161EE61895D8B000B888B2 /* AudioToolbox.framework */,
 				DC161EA61895CFDB00B888B2 /* Foundation.framework */,
 				DC161EA81895CFDB00B888B2 /* CoreGraphics.framework */,
 				DC161EAA1895CFDB00B888B2 /* UIKit.framework */,
@@ -117,6 +141,14 @@
 				DC161EB81895CFDB00B888B2 /* Main.storyboard */,
 				DC161EBB1895CFDB00B888B2 /* ViewController.h */,
 				DC161EBC1895CFDB00B888B2 /* ViewController.m */,
+				DC161EDB1895D0FB00B888B2 /* ADSR.h */,
+				DC161EDC1895D0FB00B888B2 /* ADSR.m */,
+				DC161EDE1895D15700B888B2 /* TDGenerator.h */,
+				DC161EDF1895D15700B888B2 /* TDGenerator.m */,
+				DC161EE11895D3CF00B888B2 /* TDSineGenerator.h */,
+				DC161EE21895D3CF00B888B2 /* TDSineGenerator.m */,
+				DC161EEA1895D97800B888B2 /* TDHarmonicsGenerator.h */,
+				DC161EEB1895D97800B888B2 /* TDHarmonicsGenerator.m */,
 				DC161EBE1895CFDB00B888B2 /* Images.xcassets */,
 				DC161EAD1895CFDB00B888B2 /* Supporting Files */,
 			);
@@ -250,8 +282,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC161EBD1895CFDB00B888B2 /* ViewController.m in Sources */,
+				DC161EEC1895D97800B888B2 /* TDHarmonicsGenerator.m in Sources */,
 				DC161EB71895CFDB00B888B2 /* AppDelegate.m in Sources */,
+				DC161EE31895D3CF00B888B2 /* TDSineGenerator.m in Sources */,
 				DC161EB31895CFDB00B888B2 /* main.m in Sources */,
+				DC161EDD1895D0FB00B888B2 /* ADSR.m in Sources */,
+				DC161EE01895D15700B888B2 /* TDGenerator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +416,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToneDrum/ToneDrum-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/TheAmazingAudioEngine/TheAmazingAudioEngine",
+				);
 				INFOPLIST_FILE = "ToneDrum/ToneDrum-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/TheAmazingAudioEngine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,7 +435,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ToneDrum/ToneDrum-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/TheAmazingAudioEngine/TheAmazingAudioEngine",
+				);
 				INFOPLIST_FILE = "ToneDrum/ToneDrum-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/TheAmazingAudioEngine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -460,6 +508,7 @@
 				DC161ED71895CFDB00B888B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC161ED81895CFDB00B888B2 /* Build configuration list for PBXNativeTarget "ToneDrumTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +517,7 @@
 				DC161EDA1895CFDB00B888B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
