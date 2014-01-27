@@ -51,7 +51,7 @@
                 angle-= (M_PI * 2);
             }
             
-            audio[i]+= _scratchBuffer[i];
+            audio[i]+= strongSelf->_scratchBuffer[i];
         }
         
         
