@@ -51,10 +51,13 @@
         
         TDHarmonicsGenerator *strongSelf = weakSelf;
         
-        if (strongSelf->_lastRenderTime >= time->mSampleTime) {
+        if (time->mSampleTime <= strongSelf->_lastRenderTime) {
             memcpy(audio, strongSelf->_scratchBuffer, sizeof(float) * frames);
             return;
         }
+        
+        bzero(strongSelf->_scratchBuffer, sizeof(float) * TD_SCRATCH_BUFFER_SIZE);
+
         
         for (int i = 0; i < strongSelf->_nHarmonics; i++) {
             TDSineGenerator *sineGen = strongSelf->_harmonicGenerators[i];
@@ -62,7 +65,7 @@
         }
         
         memcpy(audio, strongSelf->_scratchBuffer, sizeof(float) * frames);
-        
+        strongSelf->_lastRenderTime = time->mSampleTime;
     };
    
 }
@@ -75,7 +78,7 @@
     
     // intialize the base generator
     self->_harmonicGenerators[0].frequency = self.baseFrequency;
-    self->_harmonicGenerators[0].amplitude = 1.0;
+    self->_harmonicGenerators[0].amplitude = .5;
     self->_harmonicGenerators[0]->_lastRenderTime = 0.0;
     
     self->_nHarmonics = ratioAmpPairs.count + 1;
@@ -87,7 +90,7 @@
         if (index >= TD_MAX_HARMONICS) break;
         NSNumber *ratio = [[ratioPair allKeys] firstObject];
         NSNumber *amplitude = [ratioPair objectForKey:ratio];
-        
+                
         TDSineGenerator *sineGen = self->_harmonicGenerators[index + 1];
         
         // configure the harmonic sine wave with a freq relative to the
