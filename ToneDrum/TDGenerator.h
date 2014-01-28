@@ -11,7 +11,7 @@
 
 #define TD_SCRATCH_BUFFER_SIZE 4096
 
-// operates on audio in-place, shaping the amplitude
+// operates on audio in-place
 typedef void (^TDGeneratorBlock)(const AudioTimeStamp *time, UInt32 numFrames, float *audio);
 
 @interface TDGenerator : NSObject {
