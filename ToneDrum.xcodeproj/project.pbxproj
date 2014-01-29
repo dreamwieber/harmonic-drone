@@ -66,7 +66,7 @@
 		DC161EDF1895D15700B888B2 /* TDGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDGenerator.m; sourceTree = "<group>"; };
 		DC161EE11895D3CF00B888B2 /* TDSineGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDSineGenerator.h; sourceTree = "<group>"; };
 		DC161EE21895D3CF00B888B2 /* TDSineGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TDSineGenerator.m; sourceTree = "<group>"; };
-		DC161EE41895D8B000B888B2 /* libTheAmazingAudioEngine.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libTheAmazingAudioEngine.a; path = "TheAmazingAudioEngine/build/Debug-iphoneos/libTheAmazingAudioEngine.a"; sourceTree = "<group>"; };
+		DC161EE41895D8B000B888B2 /* libTheAmazingAudioEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTheAmazingAudioEngine.a; path = "TheAmazingAudioEngine/build/Debug-iphoneos/libTheAmazingAudioEngine.a"; sourceTree = "<group>"; };
 		DC161EE51895D8B000B888B2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		DC161EE61895D8B000B888B2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DC161EEA1895D97800B888B2 /* TDHarmonicsGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TDHarmonicsGenerator.h; sourceTree = "<group>"; };

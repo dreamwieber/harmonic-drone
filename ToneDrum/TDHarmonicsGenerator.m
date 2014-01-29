@@ -104,6 +104,16 @@
  
 }
 
+- (void)setAmp:(float)amp forHarmonic:(NSUInteger)harmonic
+{
+    
+    // (base harmonic is index 0)
+    if ((harmonic + 1) < self->_nHarmonics) {
+        TDSineGenerator *sineGen = self->_harmonicGenerators[harmonic + 1];
+        sineGen.amplitude = amp;
+    }
+}
+
 - (void)setBaseFrequency:(float)baseFrequency
 {
     _baseFrequency = baseFrequency;

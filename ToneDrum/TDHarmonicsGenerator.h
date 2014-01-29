@@ -24,5 +24,6 @@
 + (instancetype)harmonicsGeneratorWithBaseFrequency:(float)baseFreq
                         ratioAmplitudePairs:(NSArray *)ratioAmpPairs;
 
+- (void)setAmp:(float)amp forHarmonic:(NSUInteger)harmonic;
 
 @end

@@ -15,6 +15,7 @@
 @property (nonatomic, strong) AEAudioController *audioController; // The Amazing Audio Engine
 @property (nonatomic, strong) TDHarmonicsGenerator *harmonicsGenerator;
 @property (nonatomic, strong) AEBlockChannel *sineChannel;
+@property (nonatomic, strong) NSArray *ratioAmplitudePairs;
 
 @end
 
@@ -24,9 +25,9 @@
 {
     [super viewDidLoad];
 
-    NSArray *ratioAmplitudePairs = @[ @{@1.075 : @.16}, @{@2 : @1.0}, @{@3 : @.2076}, @{@4.025 : @.5254}, @{@5.075 : @.1525}];
+    self.ratioAmplitudePairs = @[ @{@1.075 : @.16}, @{@2 : @1.0}, @{@3 : @.2076}, @{@4.025 : @.5254}, @{@5.075 : @.1525}];
     
-    self.harmonicsGenerator = [TDHarmonicsGenerator harmonicsGeneratorWithBaseFrequency:40 ratioAmplitudePairs:ratioAmplitudePairs];
+    self.harmonicsGenerator = [TDHarmonicsGenerator harmonicsGeneratorWithBaseFrequency:60 ratioAmplitudePairs:self.ratioAmplitudePairs];
                                
 
     AudioStreamBasicDescription audioFormat = [AEAudioController nonInterleavedFloatStereoAudioDescription];
@@ -54,7 +55,7 @@
         }
     }];
     
-    [sineChannel setVolume:.35];
+    [sineChannel setVolume:.25];
     
     // Add the channel to the audio controller
     [self.audioController addChannels:@[sineChannel]];
@@ -69,12 +70,20 @@
     if (error) {
         NSLog(@"There was an error starting the controller: %@", error);
     }
+    
+    int index = 0;
+    for (UISlider *ampSlider in self.ampSliders) {
+        if (index < self.ratioAmplitudePairs.count) {
+            NSDictionary *ratioAmpPair = self.ratioAmplitudePairs[index++];
+            float amp = [[[ratioAmpPair allValues] firstObject] floatValue];
+            ampSlider.value = amp;
+        }
+    }
+   
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
+- (IBAction)ampChanged:(UISlider *)sender {
+    [self->_harmonicsGenerator setAmp:sender.value forHarmonic:sender.tag];
+}
 @end

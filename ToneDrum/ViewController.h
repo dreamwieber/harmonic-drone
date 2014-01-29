@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (strong, nonatomic) IBOutletCollection(UISlider) NSArray *ampSliders;
+
+- (IBAction)ampChanged:(UISlider *)sender;
+
 @end
