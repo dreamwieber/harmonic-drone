@@ -27,7 +27,7 @@
 
     self.ratioAmplitudePairs = @[ @{@1.075 : @.16}, @{@2 : @1.0}, @{@3 : @.2076}, @{@4.025 : @.5254}, @{@5.075 : @.1525}];
     
-    self.harmonicsGenerator = [TDHarmonicsGenerator harmonicsGeneratorWithBaseFrequency:60 ratioAmplitudePairs:self.ratioAmplitudePairs];
+    self.harmonicsGenerator = [TDHarmonicsGenerator harmonicsGeneratorWithBaseFrequency:40 ratioAmplitudePairs:self.ratioAmplitudePairs];
                                
 
     AudioStreamBasicDescription audioFormat = [AEAudioController nonInterleavedFloatStereoAudioDescription];
