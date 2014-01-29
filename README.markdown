@@ -5,6 +5,10 @@ The values chosen are taken from a research paper "A Study of Harmonic Overtones
 This project is based upon https://github.com/dreamwieber/sine-wave
 
 Run:
-	git submodule update
 
-...from the project directory. Use the .xcworkspace file to build and run the project.
+	git submodule init
+	
+	git submodule update
+	
+
+Add TheAmazingAudioEngine/TheAmazingAudioEngine.xcproject to your project at the top-level. Xcode will ask you to create a workspace from your project. Build and run from the workspace.
